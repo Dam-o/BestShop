@@ -1,0 +1,24 @@
+@import "../settings/variables";
+
+body {
+    font-family: $fontMain;
+}
+
+a {
+    text-decoration: none;
+    color: $gry165;
+    font-family: $fontMain;
+    font-weight: 700;
+
+
+}
+
+ul {
+    list-style: none;
+}
+
+.logo {
+    color: $colorMain;
+    font-family: $fontSecond;
+    font-size: 2rem;
+}

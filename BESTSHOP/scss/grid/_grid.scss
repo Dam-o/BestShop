@@ -1,0 +1,86 @@
+$xs: 575px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+$columns: 12;
+$column-base-width: 100% / $columns;
+$gutter: 12px;
+
+.container-fluid {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $gutter;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $gutter;
+  box-sizing: border-box;
+  
+  @media screen and (min-width: $sm) {
+    max-width: 540px;
+  }
+  
+  @media screen and (min-width: $md) {
+    max-width: 720px;
+  }
+  
+  @media screen and (min-width: $lg) {
+    max-width: 960px;
+  }
+  
+  @media screen and (min-width: $xl) {
+    max-width: 1140px;
+  }
+  
+  @media screen and (min-width: $xxl) {
+    max-width: 1320px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 $gutter * -1;
+  box-sizing: border-box;
+  
+  > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+[class*='col-'] {
+  min-height: 1px;
+  padding: $gutter;
+  box-sizing: border-box;
+}
+
+@mixin columnGenerator($breakpointValue, $breakpointName) {
+  @for $i from 1 through $columns {
+    @media (min-width: $breakpointValue) {
+      .col-#{$breakpointName}-#{$i} {
+        width: $column-base-width * $i;
+      }
+    }
+  }
+}
+
+@for $i from 1 through $columns {
+  .col-#{$i} {
+    width: $column-base-width * $i;
+  }
+}
+
+@include columnGenerator($sm, 'sm');
+@include columnGenerator($md, 'md');
+@include columnGenerator($lg, 'lg');
+@include columnGenerator($xl, 'xl');
+@include columnGenerator($xxl, 'xxl');
+

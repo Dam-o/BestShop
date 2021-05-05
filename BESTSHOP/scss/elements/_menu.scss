@@ -1,0 +1,137 @@
+@import "../settings/variables";
+
+header {
+    width: 100%;
+    height: 70px;
+    box-shadow: 0px 3px 6px $grey16;
+}
+
+.logo {
+    padding-left: 25px;
+}
+
+
+.menu {
+    padding-right: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+
+    &__list {
+        display: flex;
+
+        @media (max-width:$sm) {
+            position: absolute;
+            left: 0;
+            top: 95px;
+            flex-direction: column;
+            background-color: $white;
+            width: 100%;
+            padding-bottom: 20px;
+            display: none;
+            box-shadow: 0px 3px 6px $grey16;
+
+            li {
+                display: block;
+                padding: 15px 20px;
+
+            }
+        }
+    }
+
+
+
+    &__btn {
+        display: none;
+        position: absolute;
+        opacity: 0;
+        top: -9999999px;
+        left: -9999999px;
+
+        @media (max-width:$sm) {
+            &:checked {
+                ~.menu__list {
+                    display: flex;
+                }
+
+                ~.menu__toggle {
+                    span {
+                        &:nth-child(1) {
+                            transform: rotate(45deg) translate(2px, 5px);
+                        }
+
+                        &:nth-child(2) {
+                            opacity: 0;
+                        }
+
+                        &:nth-child(3) {
+                            transform: rotate(-45deg) translate(2px, -5px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__toggle {
+
+
+        span {
+            width: 20px;
+            height: 2px;
+            display: block;
+            margin-bottom: 3px;
+            background-color: $colorMain;
+            transition: .3s all ease-in-out;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        @media (min-width:$md) {
+            display: none;
+        }
+    }
+}
+
+
+.menu__list {
+
+    a {
+        padding: 22px 16px;
+        text-transform: uppercase;
+        border-bottom: 3px solid transparent;
+        margin-right: 20px;
+
+        @media (min-width:$xl) {
+            padding-right: 100px;
+
+
+
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover {
+            color: $black;
+
+            @media (min-width:$md) {
+
+                &:hover {
+                    padding: 22px 16px;
+                    border-color: $colorMain;
+                }
+            }
+
+            @media (min-width:$xl) {
+                &:hover {
+                    margin: 22px 84px 22px 0px;
+                }
+            }
+        }
+    }
+}
