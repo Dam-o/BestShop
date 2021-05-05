@@ -430,6 +430,22 @@ ul {
   font-size: 2rem;
 }
 
+.btn {
+  border-radius: 40px;
+  background-color: #08A6E4;
+  border: none;
+  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.16);
+  padding: 22px 80px;
+}
+@media (min-width: 576px) {
+  .btn {
+    padding: 22px 125px;
+  }
+}
+.btn a {
+  color: #fff;
+}
+
 header {
   width: 100%;
   height: 70px;
@@ -461,6 +477,7 @@ header {
     padding-bottom: 20px;
     display: none;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    z-index: 5555;
   }
   .menu__list li {
     display: block;
@@ -532,5 +549,50 @@ header {
   .menu__list a:hover:hover {
     margin: 22px 84px 22px 0px;
   }
+}
+
+.jumbotron {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.image {
+  max-width: 100%;
+  margin-top: 85px;
+  height: auto;
+}
+@media (min-width: 576px) {
+  .image {
+    margin-top: 120px;
+  }
+}
+@media (min-width: 768px) {
+  .image {
+    margin-top: 60px;
+  }
+}
+@media (min-width: 992px) {
+  .image {
+    margin-top: 0;
+  }
+}
+
+.content {
+  text-align: center;
+}
+.content h1 {
+  margin-top: 170px;
+  font-size: 35px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  line-height: 41px;
+}
+.content p {
+  margin-top: 20px;
+  line-height: 19px;
+}
+.content button {
+  margin-top: 30px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -22,3 +22,20 @@ ul {
     font-family: $fontSecond;
     font-size: 2rem;
 }
+
+.btn {
+    border-radius: 40px;
+    background-color: $colorMain;
+    border: none;
+    box-shadow: 5px 10px 14px $blue172;
+    padding: 22px 80px;
+
+    @media (min-width:$sm) {
+        padding: 22px 125px;
+    }
+
+    a {
+
+        color: $white;
+    }
+}

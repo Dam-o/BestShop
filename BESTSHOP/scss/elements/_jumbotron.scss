@@ -1,0 +1,56 @@
+@import "../settings/variables";
+
+.jumbotron {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.image {
+    max-width: 100%;
+    margin-top: 85px;
+    height: auto;
+
+
+
+    @media (min-width:$sm) {
+
+        margin-top: 120px;
+
+    }
+
+    @media (min-width:$md) {
+        margin-top: 60px;
+    }
+
+
+    @media (min-width:$lg) {
+
+        margin-top: 0;
+    }
+}
+
+
+.content {
+    text-align: center;
+
+    h1 {
+        margin-top: 170px;
+        font-size: 35px;
+        font-family: $fontSecond;
+        font-weight: 400;
+        line-height: 41px;
+    }
+
+    p {
+        margin-top: 20px;
+        line-height: 19px;
+
+    }
+
+    button {
+        margin-top: 30px;
+    }
+
+}
