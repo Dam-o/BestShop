@@ -677,4 +677,276 @@ header {
 .icon__catalog::before {
   background: #55dfb4;
 }
+
+.pros {
+  background-color: #f7f7f7;
+  padding-top: 25px;
+  padding-bottom: 100px;
+}
+
+.pros__text {
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .pros__text {
+    text-align: left;
+  }
+}
+@media (min-width: 992px) {
+  .pros__text {
+    align-items: flex-start;
+    justify-content: center;
+    padding-right: 150px;
+    padding-left: 75px;
+  }
+}
+@media (min-width: 1400px) {
+  .pros__text {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+}
+.pros__text h2 {
+  margin-bottom: 25px;
+}
+
+.article {
+  background: #fff;
+  margin-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .article {
+    display: flex;
+    min-height: 270px;
+  }
+}
+@media (min-width: 992px) {
+  .article {
+    display: flex;
+    height: 270px;
+  }
+  .article__iphone .pros__text {
+    padding-left: 150px;
+    padding-right: 75px;
+  }
+}
+
+.pros__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-width: 50%;
+}
+@media (min-width: 1200px) {
+  .pros__image {
+    order: 2;
+    min-width: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+}
+.pros__image .image {
+  z-index: 1111;
+  height: 50%;
+  width: 70%;
+  padding-top: 55px;
+}
+@media (max-width: 766px) {
+  .pros__image .image__trumpet {
+    width: 50%;
+    height: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .pros__image .image {
+    width: 50%;
+    height: 50%;
+    padding-top: 0;
+  }
+  .pros__image .image__trumpet {
+    height: 90%;
+    width: 80%;
+    position: relative;
+    top: 25px;
+  }
+}
+@media (min-width: 768px) and (min-width: 992px) {
+  .pros__image .image {
+    width: 150%;
+    height: 70%;
+    padding-right: 75px;
+    padding-left: 75px;
+  }
+  .pros__image .image__iphone {
+    width: 60%;
+    height: 70%;
+    padding-left: 50px;
+    padding-right: 0;
+  }
+  .pros__image .image__trumpet {
+    height: 100%;
+    top: 30px;
+  }
+}
+
+.macbook::after {
+  content: "";
+  position: absolute;
+  background: #fb3b64;
+  height: 80px;
+  width: 80px;
+  transform: rotate(40deg);
+  border-radius: 40%;
+  bottom: 50px;
+  right: 30px;
+}
+@media (min-width: 375px) {
+  .macbook::after {
+    bottom: 80px;
+    right: 40px;
+  }
+}
+@media (min-width: 425px) {
+  .macbook::after {
+    height: 100px;
+    width: 100px;
+    bottom: 65px;
+  }
+}
+@media (min-width: 575px) {
+  .macbook::after {
+    height: 125px;
+    width: 125px;
+    bottom: 110px;
+    right: 50px;
+    border-radius: 31%;
+  }
+}
+@media (min-width: 768px) {
+  .macbook::after {
+    right: 60px;
+    height: 100px;
+    width: 100px;
+    bottom: 140px;
+  }
+}
+@media (min-width: 992px) {
+  .macbook::after {
+    right: 70px;
+    bottom: 90px;
+    height: 150px;
+    width: 150px;
+  }
+}
+@media (min-width: 1400px) {
+  .macbook::after {
+    right: 50px;
+  }
+}
+
+.iphone::after {
+  content: "";
+  position: absolute;
+  background: #08A6E4;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  left: 40px;
+  bottom: 10px;
+}
+@media (min-width: 375px) {
+  .iphone::after {
+    bottom: 20px;
+    height: 175px;
+    width: 175px;
+  }
+}
+@media (min-width: 425px) {
+  .iphone::after {
+    left: 50px;
+    width: 200px;
+    height: 200px;
+  }
+}
+@media (min-width: 575px) {
+  .iphone::after {
+    width: 250px;
+    height: 250px;
+    bottom: 30px;
+    left: 75px;
+  }
+}
+@media (min-width: 768px) {
+  .iphone::after {
+    width: 150px;
+    height: 150px;
+    left: 80px;
+    bottom: 80px;
+  }
+}
+@media (min-width: 992px) {
+  .iphone::after {
+    width: 200px;
+    height: 200px;
+    bottom: 50px;
+    left: 150px;
+  }
+}
+@media (min-width: 1400px) {
+  .iphone::after {
+    left: 110px;
+  }
+}
+
+.trumpet {
+  background-color: #55dfb4;
+  margin-bottom: 0;
+  max-height: 200px;
+}
+@media (min-width: 767px) {
+  .trumpet {
+    max-height: 100%;
+  }
+}
+
+.article__trumpet {
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: #f7f7f7;
+  height: 100%;
+}
+@media (min-width: 768px) {
+  .article__trumpet {
+    flex-direction: row;
+  }
+}
+.article__trumpet .pros__text {
+  background: #fff;
+  min-height: 300px;
+}
+@media (min-width: 768px) {
+  .article__trumpet .pros__text {
+    padding-left: 50px;
+    padding-right: 75px;
+  }
+}
+@media (min-width: 992px) {
+  .article__trumpet .pros__text {
+    margin-right: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .article__macbook {
+    flex-direction: row-reverse;
+  }
+}
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,272 @@
+@import "../settings/variables";
+
+.pros {
+    background-color: $grey247;
+    padding-top: 25px;
+    padding-bottom: 100px;
+}
+
+.pros__text {
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width:$md) {
+        text-align: left;
+    }
+
+    @media (min-width:$lg) {
+        align-items: flex-start;
+        justify-content: center;
+        padding-right: 150px;
+        padding-left: 75px;
+    }
+
+    @media (min-width:$xxl) {
+        padding-right: 100px;
+        padding-left: 100px;
+    }
+
+    h2 {
+        margin-bottom: 25px;
+    }
+}
+
+
+.article {
+    background: #fff;
+    margin-bottom: 40px;
+
+    @media (min-width:$md) {
+        display: flex;
+        min-height: 270px;
+    }
+
+    @media(min-width: $lg) {
+        display: flex;
+        height: 270px;
+
+        &__iphone {
+
+            .pros__text {
+                padding-left: 150px;
+                padding-right: 75px;
+            }
+        }
+    }
+}
+
+.pros__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-width: 50%;
+
+
+    @media (min-width:$xl) {
+        order: 2;
+        min-width: 430px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+
+
+    }
+
+    .image {
+        z-index: 1111;
+        height: 50%;
+        width: 70%;
+        padding-top: 55px;
+
+        @media (max-width:766px) {
+
+            &__trumpet {
+                width: 50%;
+                height: 50%;
+            }
+        }
+
+        @media (min-width:$md) {
+            width: 50%;
+            height: 50%;
+            padding-top: 0;
+
+            &__trumpet {
+                height: 90%;
+                width: 80%;
+                position: relative;
+                top: 25px;
+            }
+
+
+
+            @media(min-width:$lg) {
+                width: 150%;
+                height: 70%;
+                padding-right: 75px;
+                padding-left: 75px;
+
+                &__iphone {
+                    width: 60%;
+                    height: 70%;
+                    padding-left: 50px;
+                    padding-right: 0;
+                }
+
+                &__trumpet {
+                    height: 100%;
+                    top: 30px;
+                }
+            }
+
+        }
+    }
+}
+
+.macbook::after {
+    content: "";
+    position: absolute;
+    background: $red251;
+    height: 80px;
+    width: 80px;
+    transform: rotate(40deg);
+    border-radius: 40%;
+    bottom: 50px;
+    right: 30px;
+
+
+    @media (min-width:375px) {
+        bottom: 80px;
+        right: 40px;
+    }
+
+    @media (min-width:425px) {
+        height: 100px;
+        width: 100px;
+        bottom: 65px;
+    }
+
+    @media (min-width:$xs) {
+        height: 125px;
+        width: 125px;
+        bottom: 110px;
+        right: 50px;
+        border-radius: 31%;
+    }
+
+    @media (min-width:$md) {
+        right: 60px;
+        height: 100px;
+        width: 100px;
+        bottom: 140px;
+    }
+
+    @media (min-width:$lg) {
+        right: 70px;
+        bottom: 90px;
+        height: 150px;
+        width: 150px;
+    }
+
+    @media (min-width:$xxl) {
+        right: 50px;
+    }
+}
+
+.iphone::after {
+    content: "";
+    position: absolute;
+    background: $colorMain;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    left: 40px;
+    bottom: 10px;
+
+    @media (min-width:375px) {
+        bottom: 20px;
+        height: 175px;
+        width: 175px;
+    }
+
+    @media (min-width:425px) {
+        left: 50px;
+        width: 200px;
+        height: 200px;
+    }
+
+    @media (min-width:$xs) {
+        width: 250px;
+        height: 250px;
+        bottom: 30px;
+        left: 75px;
+    }
+
+    @media (min-width:$md) {
+        width: 150px;
+        height: 150px;
+        left: 80px;
+        bottom: 80px;
+    }
+
+    @media (min-width:$lg) {
+        width: 200px;
+        height: 200px;
+        bottom: 50px;
+        left: 150px;
+    }
+
+    @media (min-width:$xxl) {
+        left: 110px;
+    }
+}
+
+.trumpet {
+    background-color: $green;
+    margin-bottom: 0;
+    max-height: 200px;
+
+    @media (min-width:767px) {
+        max-height: 100%;
+    }
+
+}
+
+.article__trumpet {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: $grey247;
+    height: 100%;
+
+    @media (min-width:$md) {
+        flex-direction: row;
+    }
+
+    .pros__text {
+        background: $white;
+        min-height: 300px;
+
+        @media (min-width:$md) {
+            padding-left: 50px;
+            padding-right: 75px;
+        }
+
+        @media (min-width:$lg) {
+            margin-right: 50px;
+        }
+    }
+
+
+}
+
+.article__macbook {
+    @media (min-width:$md) {
+        flex-direction: row-reverse;
+    }
+}
