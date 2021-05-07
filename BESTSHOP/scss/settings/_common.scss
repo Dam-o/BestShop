@@ -6,11 +6,9 @@ body {
 
 a {
     text-decoration: none;
-    color: $gry165;
+    color: $grey165;
     font-family: $fontMain;
     font-weight: 700;
-
-
 }
 
 ul {
@@ -38,4 +36,20 @@ ul {
 
         color: $white;
     }
+}
+
+h2 {
+    color: $black;
+    font-size: 30px;
+    font-family: $fontSecond;
+    font-weight: 400;
+}
+
+h3 {
+    color: #000;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: $fontSecond;
+    font-weight: 800;
+    letter-spacing: 5.96px;
 }

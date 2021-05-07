@@ -1,0 +1,72 @@
+@import "../settings/variables";
+
+.about {
+    width: 100%;
+    text-align: center;
+
+    h2 {
+        margin-top: 50px;
+        margin-bottom: 28px;
+        padding: auto 36px;
+    }
+
+    &__container {
+        margin-bottom: 25px;
+    }
+}
+
+.about__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h3 {
+        margin-top: 25px;
+    }
+
+    p {
+        color: $grey165;
+        font-size: 17px;
+        margin-top: 23px;
+    }
+
+}
+
+.icon {
+    position: relative;
+    width: 63px;
+    height: 63px;
+    left: 7%;
+    top: 0;
+
+    @media (min-width:420px) {
+        left: 4%;
+    }
+
+    .eye {
+        top: 13%;
+        position: relative;
+    }
+}
+
+.icon::before {
+    content: "";
+    background: $red251;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 50px;
+    z-index: -555;
+    top: -10%;
+    left: -35%;
+}
+
+.icon__eye::before {
+    background: $colorMain;
+}
+
+.icon__catalog::before {
+    background: $green;
+}
