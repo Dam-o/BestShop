@@ -3,7 +3,7 @@
 .pros {
     background-color: $grey247;
     padding-top: 25px;
-    padding-bottom: 100px;
+    padding-bottom: 10px;
 }
 
 .pros__text {
@@ -232,8 +232,13 @@
     margin-bottom: 0;
     max-height: 200px;
 
+
     @media (min-width:767px) {
         max-height: 100%;
+    }
+
+    @media (min-width:$md) {
+        order: 2;
     }
 
 }
