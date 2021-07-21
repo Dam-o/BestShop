@@ -973,11 +973,17 @@ header {
   justify-content: space-around;
   padding-top: 25px;
   padding-bottom: 50px;
-  margin-right: 15px;
   max-width: 370px;
   width: 100%;
   position: relative;
   bottom: 0px;
+  margin-right: 15px;
+}
+@media (min-width: 420px) {
+  .pricing__container {
+    margin-right: 0;
+    margin-left: 15px;
+  }
 }
 @media (min-width: 768px) {
   .pricing__container {
