@@ -437,6 +437,15 @@ ul {
   box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.16);
   padding: 22px 80px;
 }
+.btn:hover {
+  background-color: #008DCB;
+}
+.btn__premium:hover {
+  background-color: #3CC69B;
+}
+.btn__basic:hover {
+  background-color: #E2224B;
+}
 @media (min-width: 576px) {
   .btn {
     padding: 22px 125px;
@@ -1339,13 +1348,25 @@ footer {
   }
 }
 .calc__summary--single {
-  padding: 5px 5px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5px;
+  padding-right: 5px;
+  align-items: center;
   color: white;
   background-color: #55dfb4;
   height: 31px;
   margin-bottom: 5px;
   border-radius: 6px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+.calc__summary--single span {
+  color: #e8e9ed;
+  font-size: 13px;
+}
+.calc__summary--single .sum {
+  color: white;
+  font-weight: 600;
 }
 
 .total {

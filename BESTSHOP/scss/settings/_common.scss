@@ -2,7 +2,7 @@
 
 body {
     font-family: $fontMain;
-   
+
 }
 
 a {
@@ -28,6 +28,18 @@ ul {
     border: none;
     box-shadow: 5px 10px 14px $blue172;
     padding: 22px 80px;
+
+    &:hover {
+        background-color: #008DCB;
+    }
+
+    &__premium:hover {
+        background-color: #3CC69B;
+    }
+
+    &__basic:hover {
+        background-color: #E2224B;
+    }
 
     @media (min-width:$sm) {
         padding: 22px 125px;

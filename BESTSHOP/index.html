@@ -176,7 +176,7 @@
                     <input class="form__input quantity" id="quantity" type="number" placeholder="Products quantity">
                     <label class="form__label" for="orders"></label>
                     <input class="form__input orders" id="orders" type="number" placeholder="Estimated orders in month">
-                    <label class="form__label" id="package"></label>
+                    <label class="form__label" id="package__label"></label>
                     <select required class="form__select" id="package">
                         <option value="" disabled selected hidden class="first--option">Choose package</option>
                         <option value="basic">Basic</option>
@@ -185,29 +185,51 @@
                     </select>
                     <div class="options__container ">
                         <div class=" options accounting__container">
-                            <label class="form__checkbox accounting ">
-                                <input type="checkbox">
+                            <label class="form__checkbox accounting " for="accounting">
+                                <input type="checkbox" id="accounting">
                                 <span class="checkbox"></span>
                                 <p>Accounting</p>
                             </label>
                         </div>
                         <div class="options payment__container">
-                            <label class="form__checkbox payment">
-                                <input type="checkbox">
+                            <label class="form__checkbox payment" for="terminal">
+                                <input type="checkbox" id="terminal">
                                 <span class="checkbox"></span>
                                 <p>Rental of a payment terminal</p>
                             </label>
                         </div>
                     </div>
                 </form>
-                <div class="col-12 col-md-6 calc__summary--container d-none">
-                    <div class="calc__summary--single" id="products">Products</div>
-                    <div class="calc__summary--single" id="orders--calc">Orders</div>
-                    <div class="calc__summary--single" id="package--calc">Package</div>
-                    <div class="calc__summary--single" id="accounting--calc">Accounting</div>
-                    <div class="calc__summary--single" id="terminal">Terminal</div>
-                    <div class="calc__summary--single total">Total</div>
-                </div>
+                <ul class="col-12 col-md-6 calc__summary--container d-none">
+                    <li class="calc__summary--single" id="quantity--sum">
+                        <span>Products</span>
+                        <span class="qty"></span>
+                        <span class="sum"></span>
+                    </li>
+                    <li class="calc__summary--single" id="orders--sum">
+                        <span>Orders</span>
+                        <span class="qty"></span>
+                        <span class="sum"></span>
+                    </li>
+                    <li class="calc__summary--single" id="package--sum">
+                        <span>Package</span>
+                        <span class="option sum"></span>
+                    </li>
+                    <li class="calc__summary--single" id="accounting--sum">
+                        <span>Accounting</span>
+                        <span class="qty"></span>
+                        <span class="sum"></span>
+                    </li>
+                    <li class="calc__summary--single" id="terminal--sum">
+                        <span>Terminal</span>
+                        <span class="qty"></span>
+                        <span class="sum"></span>
+                    </li>
+                    <li class="calc__summary--single total">
+                        <span>Total</span>
+                        <span class="summary"></span>
+                    </li>
+                </ul>
             </div>
     </section>
 
@@ -280,6 +302,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
