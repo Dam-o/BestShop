@@ -1,0 +1,169 @@
+@import "../settings/variables";
+
+
+
+
+.calc {
+    background-color: $grey247;
+    padding-bottom: 30px;
+
+    h2 {
+        padding-top: 42px;
+        text-align: center;
+        margin-bottom: 30px;
+
+        @media(min-width: $md) {
+            margin-bottom: 40px;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+
+
+    }
+}
+
+.calc__select {
+    .form__input {
+        border: 1px solid $colorMain;
+        border-radius: 6px;
+        height: 40px;
+        box-shadow: 0px 3px 6px rgba(8, 166, 228, 0.16);
+        margin-bottom: 20px;
+
+        &::placeholder {
+            color: $grey165;
+            font-size: 13px;
+            padding-left: 10px;
+        }
+
+        &:focus {
+            outline: none;
+            border: 3px solid $colorMain;
+        }
+
+    }
+
+
+    .form__select {
+        height: 40px;
+        border-radius: 6px;
+        border: 1px solid $colorMain;
+        box-shadow: 0px 3px 6px rgba(8, 166, 228, 0.16);
+        color: $grey165;
+        font-size: 13px;
+        padding-left: 10px;
+        appearance: none;
+        background-image: url("../../images/Arrow\ Down.svg");
+        background-repeat: no-repeat;
+
+        background-position-x: 98%;
+        background-position-y: center;
+
+        &:focus {
+            outline: none;
+            border: 3px solid $colorMain;
+        }
+
+    }
+
+}
+
+.options {
+    margin-top: 20px;
+
+    label {
+        display: flex;
+
+        input {
+            opacity: 0;
+            height: 0;
+            width: 0;
+            cursor: pointer;
+
+
+            &:checked~.checkbox {
+                background-image: url("../../images/Checkmark.svg");
+                background-position: center;
+                background-size: 50%;
+                background-repeat: no-repeat;
+            }
+
+        }
+
+
+        span {
+            width: 24px;
+            height: 24px;
+            border: 1px solid $grey165;
+            margin-top: 2px;
+            border-radius: 4px;
+            position: absolute;
+
+        }
+
+        p {
+            font-size: 12px;
+            margin-left: 40px;
+            margin-top: 5px;
+            color: $grey112;
+        }
+    }
+}
+
+
+.calc__summary {
+
+
+    &--container {
+
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: $md) {
+            margin-top: 0;
+        }
+    }
+
+    &--single {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 5px;
+        padding-right: 5px;
+        align-items: center;
+        color: rgba(255, 255, 255, 1);
+        background-color: $green;
+        height: 31px;
+        margin-bottom: 5px;
+        border-radius: 6px;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+
+        span {
+            color: $grey232;
+            font-size: 13px;
+        }
+
+        .sum {
+            color: white;
+            font-weight: 600;
+        }
+    }
+
+}
+
+.total {
+    margin-top: 15px;
+    align-self: flex-end;
+    padding: 7px 7px;
+    height: 38px;
+    background-color: $colorMain;
+    width: 50%;
+
+    @media (min-width: $xxl) {
+        width: 33%;
+    }
+}

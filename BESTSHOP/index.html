@@ -117,7 +117,7 @@
                     <div class="pricing__container pricing__container--basic">
                         <div class="text__container text__container--basic">
                             <h3>Basic</h3>
-                            <p>$0</p>
+                            <p class="price" data-price="0">$0</p>
                         </div>
                         <ul class="package__content">
                             <li>100 MB HDD</li>
@@ -133,7 +133,7 @@
                     <div class="pricing__container pricing__container--proffessional">
                         <div class="text__container text__container--proffessional">
                             <h3>Proffessional</h3>
-                            <p>$25</p>
+                            <p class="price" data-price="25">$25</p>
                             <span>Limited offer</span>
                         </div>
                         <ul class="package__content">
@@ -151,7 +151,7 @@
                     <div class="pricing__container pricing__container--premium">
                         <div class="text__container text__container--premium">
                             <h3>Premium</h3>
-                            <p>$60</p>
+                            <p class="price" data-price="60">$60</p>
                             <span>Limited offer</span>
                         </div>
                         <ul class="package__content">
@@ -166,17 +166,86 @@
                 </article>
             </div>
         </section>
-        <section class="calc"></section>
-        <section class="contact">
+    </div>
+    <section class="calc">
+        <div class="container">
+            <h2>Calculate how much you’ll pay</h2>
+            <div class="row">
+                <form class="col-12 col-md-6 calc__select">
+                    <label class="form__label" for="quantity"></label>
+                    <input class="form__input quantity" id="quantity" type="number" placeholder="Products quantity">
+                    <label class="form__label" for="orders"></label>
+                    <input class="form__input orders" id="orders" type="number" placeholder="Estimated orders in month">
+                    <label class="form__label" id="package__label"></label>
+                    <select required class="form__select" id="package">
+                        <option value="" disabled selected hidden class="first--option">Choose package</option>
+                        <option value="basic">Basic</option>
+                        <option value="proffessional">Proffessional</option>
+                        <option value="premium">Premium</option>
+                    </select>
+                    <div class="options__container ">
+                        <div class=" options accounting__container">
+                            <label class="form__checkbox accounting " for="accounting">
+                                <input type="checkbox" id="accounting">
+                                <span class="checkbox"></span>
+                                <p>Accounting</p>
+                            </label>
+                        </div>
+                        <div class="options payment__container">
+                            <label class="form__checkbox payment" for="terminal">
+                                <input type="checkbox" id="terminal">
+                                <span class="checkbox"></span>
+                                <p>Rental of a payment terminal</p>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+                <ul class="col-12 col-md-6 calc__summary--container d-none">
+                    <li class="calc__summary--single" id="quantity--sum">
+                        <span>Products</span>
+                        <span class="qty"></span>
+                        <span class="sum"></span>
+                    </li>
+                    <li class="calc__summary--single" id="orders--sum">
+                        <span>Orders</span>
+                        <span class="qty"></span>
+                        <span class="sum"></span>
+                    </li>
+                    <li class="calc__summary--single" id="package--sum">
+                        <span>Package</span>
+                        <span class="option sum"></span>
+                    </li>
+                    <li class="calc__summary--single" id="accounting--sum">
+                        <span>Accounting</span>
+                        <span class="qty"></span>
+                        <span class="sum"></span>
+                    </li>
+                    <li class="calc__summary--single" id="terminal--sum">
+                        <span>Terminal</span>
+                        <span class="qty"></span>
+                        <span class="sum"></span>
+                    </li>
+                    <li class="calc__summary--single total">
+                        <span>Total</span>
+                        <span class="summary"></span>
+                    </li>
+                </ul>
+            </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6 contact__column">
                     <h2>Any questions?</h2>
                     <p>Leave your email address or call us!</p>
                     <a href="#" class="mail"><img src="./images/Mail Icon.svg" alt="mail_icon">info@bestshop.xyz</a>
-                    <a href="#" class="phone"><img src="./images/Phone Icon.svg" alt="phone_icon">123 456 789</a>
+                    <a href="#" class="phone"><img src="./images/Phone Icon.svg" alt="phone_icon">123
+                        456
+                        789</a>
                 </div>
                 <div class="col-12 col-md-6 contact_column">
-                    <form>
+                    <form class="contact__form">
                         <div class="form__field">
                             <label class="form__label" for="name">Name</label>
                             <input class="form__input name" id="name" type="text">
@@ -190,11 +259,24 @@
                             <label class="form__checkbox">
                                 <input type="checkbox">
                                 <span class="checkbox"></span>
-                                <p class="consent__text">I hereby give consent for my personal data included in my
-                                    application to be processed for the purposes of the recruitment process under the
-                                    European Parliament’s and Council of the European Union Regulation on the Protection
-                                    of Natural Persons as of 27 April 2016, with regard to the processing of personal
-                                    data and on the free movement of such data, and repealing Directive 95/46/EC (Data
+                                <p class="consent__text">I hereby give consent for my personal data
+                                    included in
+                                    my
+                                    application to be processed for the purposes of the recruitment
+                                    process
+                                    under
+                                    the
+                                    European Parliament’s and Council of the European Union
+                                    Regulation
+                                    on the
+                                    Protection
+                                    of Natural Persons as of 27 April 2016, with regard to the
+                                    processing of
+                                    personal
+                                    data and on the free movement of such data, and repealing
+                                    Directive
+                                    95/46/EC
+                                    (Data
                                     Protection Directive)</p>
                             </label>
                         </div>
@@ -202,7 +284,8 @@
                     </form>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
     </div>
     <footer>
@@ -219,6 +302,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
