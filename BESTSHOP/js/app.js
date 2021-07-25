@@ -87,14 +87,25 @@ const events = () => {
 
     accCheck.addEventListener("change", e => {
         e.preventDefault;
-        addQty(acc, accCheck, price.accounting);
-        sumArr.push(sumValue);
+        if (accCheck.checked) {
+            addQty(acc, accCheck, price.accounting);
+            sumArr.push(sumValue);
+        } else {
+            addQty(acc, accCheck, 0)
+            sumArr.pop();
+        }
     });
 
     terminalCheck.addEventListener("change", e => {
-        e.preventDefaultl
-        addQty(terminal, terminalCheck, price.terminal);
-        sumArr.push(sumValue);
+        e.preventDefaultl;
+        if (terminalCheck.checked) {
+            addQty(terminal, terminalCheck, price.terminal);
+            sumArr.push(sumValue);
+        } else {
+            addQty(terminal, terminalCheck, 0);
+            sumArr.pop();
+        }
+
     });
 
     packageChoose.addEventListener("change", e => {
@@ -102,8 +113,6 @@ const events = () => {
         select(e);
         sumArr.push(sumValue);
     });
-
-    console.log(sumArr);
 
     form.addEventListener("change", e => {
         e.preventDefault();
