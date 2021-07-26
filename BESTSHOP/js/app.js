@@ -116,11 +116,18 @@ const events = () => {
 
     form.addEventListener("change", e => {
         e.preventDefault();
-        summary(sumArr);
+        if (sumArr.length > 1) {
+            summary(sumArr);
+        } else {
+            return sumBox.innerText = sumValue.toFixed(2) + "$";
+        }
     });
+
 
 }
 
 events();
+
+
 
 
