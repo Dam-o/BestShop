@@ -610,13 +610,13 @@ header {
   .image__container {
     margin-top: 25px;
     background-position: center;
-    background-image: url(../../images/Background.png);
+    background-image: url(../images/Background.png);
   }
 }
 @media (min-width: 768px) {
   .image__container {
     margin-top: 50px;
-    background-image: url(../../images/Background@2x.png);
+    background-image: url(../images/Background@2x.png);
     background-position: center;
   }
 }
